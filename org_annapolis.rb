@@ -1,10 +1,9 @@
 def org_annapolis
   puts "Do you want to visit the Senate or the House of Delegates?"
   house = gets.chomp.capitalize
-  if house == "the Senate"||"Senate"
+  if house == "The Senate" || "Senate"
     puts "What is one issue you are passionate about?"
     issue = gets.chomp
-
     if issue == "budget" || "money" || "taxes" || "property" || "education spending" || "retirement"
       committee = "Budget and Taxation Committee"
 
@@ -19,7 +18,9 @@ def org_annapolis
       
     else issue == "executive nominations"
       committee = "Executive Nominations Committee"
-  end
+    end
   puts "Great! To learn watch related legislation currently be debated by your representatives or testify on behalf of a bill, you should visit the #{committee}!"
+else 
+  
 end
 org_annapolis
