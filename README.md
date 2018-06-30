@@ -1,11 +1,25 @@
-Hi! 👋
+def org_annapolis
+  puts "Do you want to visit the Senate or the House of Delegates?"
+  house = gets.chomp.capitalize
+  if house == "the Senate"||"Senate"
+    puts "What is one issue you are passionate about?"
+    issue = gets.chomp
 
-You've opened the IDE Sandbox. 🎉
+    if issue == "budget" || "money" || "taxes" || "property" || "education spending" || "retirement"
+      committee = "Budget and Taxation Committee"
 
-The Sandbox is an environment that you can access on "readme" and "code-along" lessons in Learn. It's a great place to experiment with code when you're not working on a "lab" (labs open the IDE In Browser).
+    elsif issue == "banks" || "unemployment insurance" || "workers' compensation" || "horse racing" || "lotteries" || "transportation"
+      committee = "Finance Committee"
 
-The work you do in the Sandbox will be saved from lesson to lesson, and is automatically saved on your behalf to a repository in your GitHub account called `learn-co-sandbox`.
+    elsif issue == "constitutional amendments" || "penalities" || "crime" || "family law" || "juvenile justice" || "public safety" || "vehicle laws"
+      committee = "Judicial Proceedings Committee"
 
-Please DO NOT touch this repository in GitHub, as it will affect your Sandbox experience, and potentially cause your work to be out of sync.
-
-To learn more about the Sandbox, please visit http://help.learn.co/ide-in-browser#sandbox.
+    elsif issue == "farming" || "farms" || "agriculture" || "labor" || "agriculture" || "education policy" || "energy" || "environment" || "natural resources" || "veterans affairs"
+      committee = "Education, Health and Environmental Affairs Committee"
+      
+    else issue == "executive nominations"
+      committee = "Executive Nominations Committee"
+  end
+  puts "Great! To learn watch related legislation currently be debated by your representatives or testify on behalf of a bill, you should visit the #{committee}!"
+end
+org_annapolis
